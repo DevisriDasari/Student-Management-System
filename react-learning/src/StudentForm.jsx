@@ -56,59 +56,44 @@ function StudentForm({
   }
 
   return (
-    <div
-      style={{
-        width: "400px",
-        margin: "20px auto",
-        padding: "20px",
-        border: "1px solid #ddd",
-        borderRadius: "10px",
-        boxShadow: "0 0 10px rgba(0,0,0,0.1)",
-      }}
-    >
+    <div className="student-form">
       <h2 style={{ textAlign: "center" }}>{title}</h2>
 
       <input
         type="text"
-        placeholder="Student Name"
+        placeholder="👤 Student Name"
         value={studentName}
         onChange={(e) => setStudentName(e.target.value)}
       />
 
-      <br />
-      <br />
-
       <input
         type="text"
-        placeholder="Roll Number"
+        placeholder="🆔 Roll Number"
         value={rollNumber}
         onChange={(e) => setRollNumber(e.target.value)}
       />
 
-      <br />
-      <br />
-
       <input
         type="text"
-        placeholder="Course"
+        placeholder="📘 Course"
         value={course}
         onChange={(e) => setCourse(e.target.value)}
       />
 
-      <br />
-      <br />
-
       <input
         type="number"
-        placeholder="Age"
+        placeholder="🎂 Age"
         value={age}
         onChange={(e) => setAge(e.target.value)}
       />
 
-      <br />
-      <br />
-
-      <button onClick={handleSubmit}>
+      <button
+        onClick={handleSubmit}
+        style={{
+          width: "100%",
+          marginTop: "10px",
+        }}
+      >
         {buttonText}
       </button>
     </div>
